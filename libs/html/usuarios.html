@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Pagina Principal
+    </title>
+    <link rel="stylesheet" href="../css/estilo2.css">
+    <script type="text/javascript" src="../js/validaciones.js"></script>
+    <script src="../js/crud.js"></script>	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+</head>
+
+<body>
+<div class="angry-grid">
+	<div class="Cabezera" id="item-0">
+		
+		<h1>Crud</h1>
+		<div id="Fecha"></div>
+		<div id="reloj"></div>
+		<div id="Us"></div>
+	</div>
+	<div id="item-1">
+		<div class="navbar">
+  			<div class="subnav">
+    			<button class="subnavbtn">Usuario<i class="fa fa-caret-down"></i></button>
+    			<div class="subnav-content">
+      				<a href="usuarios.html">Edicion</a>
+      				<a onclick="mostrar()">Busqueda</a>
+    			</div>
+  			</div> 
+			<a id="reporte">Reporte</a>
+			<a href="../../index.html">Salir</a>
+			
+</div>
+	</div>
+  <div id="item-2">
+<form class="Buscar" id="form" style="display: none">
+                        <h2>Busqueda</h2>
+                        <input type="text" name="usuario" id="busca">
+                    </form>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="jumbotron">Registro de usuarios</h1>
+                <table id="grid" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+							<th>Cedula</th>
+							<th>Correo</th>
+                            <th>Usuario</th>
+                            <th>Contraseña</th>
+							<th>Estado</th>
+                            <th style="width:80px;">
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <input id="nombre" type="text" class="form-control" placeholder="Ej: Paul Salazar"   onkeypress="return soloLetras(event)" required="required"/>
+                            </th>
+							<th>
+								<input type="text" required="required" class="form-control" id="cedula" placeholder="Ej:1765348907" onChange="ValidarCedula()" onkeypress="return valideKey(event)" maxlength="10" />
+                            </th>
+							<th>
+                                <input id="correo" type="text" class="form-control"  placeholder="Ej:prueba1@gmail.com"  onChange="ValidarCorreo()" required="required" />
+                            </th>
+                            <th>
+                                <input id="usuario" type="text" class="form-control" placeholder="Ej:pretr234"  onChange="validarUsuario()" required="required" />
+                            </th>
+                            <th>
+                                <input id="clave" type="text" class="form-control" required="required"  onChange="validarContra()"/>
+                            </th>
+							<th>
+								<select id="estado">
+								  <option>Activo</option>
+								  <option>Inactivo</option>
+								</select>
+                            </th>
+                            <th>
+                                <button id="btn-add" class="btn-btn-default">Anadir</button>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+				<script type="text/javascript" src="../js/validaciones.js"></script>
+				<script src="../js/crud.js"></script>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div id="item-3">
+  <div id="Pie">		  
+	  <h3>@2022</h3>
+	</div>
+</div>
+
+</body>
+
+</html>
